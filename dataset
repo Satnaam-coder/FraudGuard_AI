@@ -1,0 +1,32 @@
+## 📂 Dataset
+
+The dataset used in this project is publicly available on Kaggle.
+
+- 📌 Dataset Name: Credit Card Fraud Detection
+- 📊 Source: Kaggle
+- 🔗 Link: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+### 📖 Description
+
+This dataset contains transactions made by European cardholders in September 2013.
+
+- Total Transactions: 284,807
+- Fraudulent Transactions: 492 (Highly Imbalanced Dataset)
+
+### 🔍 Features
+
+- Time: Seconds elapsed between each transaction
+- Amount: Transaction amount
+- V1–V28: PCA-transformed numerical features (for privacy protection)
+- Class: Target variable (0 = Normal, 1 = Fraud)
+
+### ⚠️ Note
+
+Due to privacy concerns, original features are not provided.  
+Instead, PCA (Principal Component Analysis) has been applied to transform the data into numerical features (V1–V28).
+
+### 📥 How to Download
+
+1. Go to the Kaggle dataset link above
+2. Download the dataset (`creditcard.csv`)
+3. Place it inside your project folder (optional for retraining)
