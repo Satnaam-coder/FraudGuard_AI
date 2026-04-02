@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FraudGuard AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 FraudGuard AI System</h1>
+
+    <a href="/simulate">
+        <button>Simulate Transaction 🚀</button>
+    </a>
+
+    <a href="/live">
+        <button>Live Monitoring 📊</button>
+    </a>
+
+    {% if transaction %}
+    <div class="result">
+        <h2>🔍 Transaction Result</h2>
+
+        <p><b>Fraud Probability:</b> {{ probability }}%</p>
+        <p><b>Risk:</b> {{ risk }}</p>
+        <p><b>Decision:</b> {{ decision }}</p>
+    </div>
+    {% endif %}
+
+    {% if transactions %}
+    <h2>📊 Live Transactions</h2>
+
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>Fraud %</th>
+            <th>Risk</th>
+            <th>Decision</th>
+        </tr>
+
+        {% for t in transactions %}
+        <tr>
+            <td>{{ t.amount }}</td>
+            <td>{{ t.prob }}%</td>
+            <td>{{ t.risk }}</td>
+            <td>{{ t.decision }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
